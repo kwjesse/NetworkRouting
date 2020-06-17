@@ -1,0 +1,147 @@
+
+		def dijkstra():
+			make_queue()
+			create list of shortest paths nodes
+			while currentSize > 0:
+				min = delete_min()
+				list.append(min)
+				for all edges of min:
+					dist = calculate_distance (u, v) + dist(u)
+					if previously deleted:
+						continue
+					else if node has not been visited:
+						insert(v, dist)
+						v.previous = u
+					else if dist < v.dist:
+						decrease_key(index of v, dist)
+						v.previous = u
+			return list
+			
+
+		def calculate_distance(p1, p2):
+			dist = math.sqrt((p1.x() - p2.x())^2 + (p1.y() - p2.y())^2)
+			return dist*100
+			
+		Binary_Heap
+
+		def make_heap():
+			insert(source node, 0.0)
+			
+		def insert(node, dist):
+			Create node object and insert into binaryHeapArray
+			currentSize += 1
+			Update pointer array with currentSize
+			if currentSize != 1:
+				bubble_up(currentSize)
+				
+		def bubble_up(index):
+			i = index
+			p = ceil(i/2)
+			while i != 1 and dist(binaryHeapArray[i]) < dist(binaryHeapArray[p])
+				swap(i, p)
+				i = p
+				p = ceil(i/2)
+				
+		def delete_min():
+			min = binaryHeapArray[1]
+			Update pointer array for min and currentSize node
+			binaryHeapArray[1] = binaryHeapArray[currentSize]
+			binaryHeapArray.pop(currentSize)
+			currentSize -= 1
+			if currentSize != 0:
+				siftdown(1)
+			return min
+			
+		def siftdown(index):
+			i = index
+			min_child = min_child(i)
+			while min_child != 0 and dist(binaryHeapArray[i]) > dist(binaryHeapArray[min_child]):
+				swap(i, min_child)
+				i = min_child
+				min_child = min_child(i)
+				
+		def min_child(i):
+			if 2 * i == currentSize:
+				return i * 2
+			else if 2 * i > currentSize:
+				return 0
+			else:
+				if dist(binaryHeapArray[i*2]) < dist(binaryHeapArray[i*2+1)):
+					return i * 2
+				else:
+					return i * 2 + 1
+		
+		def decrease_key(index, dist):
+			binaryHeapArray[pointerArray[index]] = dist
+			bubble_up(pointerArray[index])
+					
+					
+		Unsorted Array
+
+		def make_array():
+			insert(source index, 0.0)
+			
+		def insert(index, dist):
+			dist(unsortedArray[index]) = dist
+			currentSize += 1
+			
+		def decrease_key(index, dist):
+			dist(unsortedArray[index]) = dist
+			
+		def delete_min():
+			min_index = 0
+			is_found = false
+			for i from 0 to len(unsortedArray):
+				if is_found and dist(unsortedArray[i]) == -1
+					continue
+				else if is_found and dist(unsortedArray[i]) < dist(unsortedArray[min_index]):
+					min_index = i*2
+				else if not is_found and (dist(unsortedArray[i] == inf or dist(unsortedArray[i] == -1):
+					min_index += 1
+				else if not is_found and dist(unsortedArray[i] != inf or dist(unsortedArray[i] != -1:
+					is_found = true
+					if currentSize == 1:
+						break
+			min_node = unsortedArray[min_index]
+			currentSize -= 1
+			return min_node
+			
+			
+		BestShortestPath
+		
+		def getBestShortestPath(dest, shortest_paths):
+			Create list
+			dest_pos = -1
+			for i from 0 to len(shortest_paths):
+				insert dest into list
+			if dest_pos == -1
+				return empty list
+			next_pos = dest_pos
+			for i from dest_pos -1 to 0, incr -1:
+				if shortest_paths[i] node == prev(shortest_paths[next_pos]):
+				insert shortest_paths[i] into list
+				next_pos = i
+			insert source node into list
+			return list 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+				
+			
+		
+					
+					
+					
+					
+					
+					
+					
+			
